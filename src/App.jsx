@@ -12,15 +12,14 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div id="student-menu">
+    <div id="main-student">
       <h1>Student Details</h1>
       {
         student.map(s=>
           <Member id={s.id} name={s.name} rollno={s.rollno} />
           )
       }
-      
-          </div>
+      </div>
   )
 }
 

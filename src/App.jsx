@@ -6,15 +6,21 @@ import './App.css'
 import './Components/ComponentOne'
 import ComponentOne from './Components/ComponentOne'
 import ComponentTwo from './Components/ComponentTwo'
+import Member from './Components/Member'
+import { student } from './Data/Student'
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-      <h1>Hello React.....from App.jsx</h1>
-      <ComponentOne/>
-      <ComponentTwo/>
-          </>
+    <div id="student-menu">
+      <h1>Student Details</h1>
+      {
+        student.map(s=>
+          <Member id={s.id} name={s.name} rollno={s.rollno} />
+          )
+      }
+      
+          </div>
   )
 }
 
